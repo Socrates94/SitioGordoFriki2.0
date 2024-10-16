@@ -356,7 +356,7 @@ h2 {
 }
 
 h3 {
-  font-size: 6rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -719,3 +719,26 @@ body > section {
   }
 }
 /* fin loder */
+.sobre-nosotros {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-nosotros {
+  margin-top: 5rem;
+}
+.contenido-nosotros h2 {
+  margin-bottom: 2rem;
+}
+.contenido-nosotros .fecha {
+  color: #4CB8B3;
+  font-weight: bold;
+}
