@@ -49,13 +49,13 @@
 .bg-verde{
     background-color: v.$verde;
     li:nth-child(even){
-        background-color: color.adjust(v.$verde, $lightness: 5%)
+        background-color: color.adjust(v.$verde, $lightness: 5%);
     }
 }
 
 .bg-amarillo{
     background-color: v.$amarillo;
     li:nth-child(even){
-        background-color: color.adjust(v.$amarillo, $lightness: 20%)
+        background-color: color.adjust(v.$amarillo, $lightness: 20%);
     }
 }
