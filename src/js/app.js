@@ -26,7 +26,7 @@ function navegacionFija() {
 function crearGaleria() {
     const galeria = document.querySelector(".galeria-imagenes");
 
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 1; i <= 20; i++) {
         const imagen = document.createElement("PICTURE");
         // imagen.loading = 'lazy'
         // imagen.width = "300"
