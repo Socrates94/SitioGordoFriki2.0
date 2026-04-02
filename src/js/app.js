@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     crearGaleria();
     navegacionFija();
     resaltarEnlace();
-    srcollNav();
+    scrollNav();
     //slide();
 });
 
@@ -28,7 +28,7 @@ function crearGaleria() {
     const galeria = document.querySelector(".galeria-imagenes");
 
     for (let i = 1; i <= 20; i++) {
-        const imagen = document.createElement("PICTURE");
+        const imagen = document.createElement("picture");
         // imagen.loading = 'lazy'
         // imagen.width = "300"
         // imagen.height = "200"
@@ -51,7 +51,7 @@ function crearGaleria() {
 }
 
 function mostrarImagen(indice) {
-    const imagen = document.createElement("PICTURE");
+    const imagen = document.createElement("picture");
     //   imagen.src = `src/img/full/${indice}.jpg`;
     //   imagen.alt = "galeria";
 
@@ -69,7 +69,7 @@ function mostrarImagen(indice) {
     // Boton cerrar modal
     const cerrarModalBtn = document.createElement("BUTTON");
     cerrarModalBtn.textContent = "X";
-    cerrarModalBtn.classList.add("btn-cerrra");
+    cerrarModalBtn.classList.add("btn-cerrar");
     cerrarModalBtn.onclick = cerrarModal;
 
     modal.appendChild(imagen);
@@ -118,7 +118,7 @@ function resaltarEnlace() {
     });
 }
 
-function srcollNav() {
+function scrollNav() {
     const navLinks = document.querySelectorAll(".navegacion-principal a");
 
     navLinks.forEach((link) => {

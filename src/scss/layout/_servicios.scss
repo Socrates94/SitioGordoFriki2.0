@@ -3,34 +3,47 @@
 @use "sass:color";
 
 .lineup{
-    background-color: v.$rosa;
+    background-color: v.$blanco;
+    padding: 10rem 0;
 
     h3, .dia{
         text-align: center;
-        color: v.$blanco;
+        color: v.$negro;
     }
 
     .dia{
         font-size: 3rem;
         text-transform: uppercase;
+        margin: 5rem 0;
+        font-weight: 900;
     }
-
 }
 
 .escenarios-contenedor{
     @include m.contenedor;
     @include m.tablet{
-        @include m.grid(2);
+        @include m.grid(2, 5rem);
     }
 }
 
 .escenario{
-    padding-top: 2rem;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem;
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+    }
+
     .nombre-escenario{
-        font-size: 3rem;
-        font-weight: bold;
+        font-size: 2.8rem;
+        font-weight: 900;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 3rem;
     }
 }
 
@@ -38,24 +51,37 @@
     @include m.resetear-lista;
 
     li{
-        padding: 2.5rem;
+        padding: 1.5rem 0;
         font-weight: 500;
+        font-size: 1.8rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: space-between;
+
         span{
-            font-weight: 400;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            margin-top: 2rem;
+            font-style: italic;
+            justify-content: center;
         }
     }
 }
 
 .bg-verde{
-    background-color: v.$verde;
-    li:nth-child(even){
-        background-color: color.adjust(v.$verde, $lightness: 5%);
-    }
+    background-color: lighten(v.$verde, 35%);
+    border-top: 1rem solid v.$verde;
+    .nombre-escenario { color: darken(v.$verde, 20%); }
+    li { color: darken(v.$verde, 30%); }
 }
 
 .bg-amarillo{
-    background-color: v.$amarillo;
-    li:nth-child(even){
-        background-color: color.adjust(v.$amarillo, $lightness: 20%);
-    }
+    background-color: lighten(v.$amarillo, 35%);
+    border-top: 1rem solid v.$amarillo;
+    .nombre-escenario { color: darken(v.$amarillo, 20%); }
+    li { color: darken(v.$amarillo, 30%); }
 }
