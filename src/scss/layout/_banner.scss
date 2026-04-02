@@ -3,76 +3,100 @@
 
 /* estilos al banner */
 .hero {
-    animation: banner 20s infinite linear alternate;
+    height: 100vh;
+    min-height: 60rem;
+    background: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                v.$bg_primary;
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Ocupa toda la pantalla */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    margin-bottom: 0;
+    overflow: hidden;
+    animation: bannerFade 20s infinite linear alternate;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30rem;
+        background: linear-gradient(to top, v.$bg_primary, transparent);
+    }
 }
 
 .contenido-hero {
-    /* Efecto Glassmorphism */
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    
-    padding: 5rem;
-    border-radius: 2rem;
-    text-align: center;
+    position: relative;
+    z-index: 10;
     max-width: 80rem;
     width: 90%;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 0 auto;
+    text-align: center;
+
+    @include m.tablet {
+        text-align: left;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: clamp(3.5rem, 8vw, 6.5rem);
+        line-height: 1.1;
+        margin-bottom: 3rem;
+        color: v.$blanco;
+        text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .ubicacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 4rem;
+
+        @include m.tablet {
+            justify-content: flex-start;
+        }
+
+        p {
+            font-weight: 700;
+            color: v.$text_primary;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.6rem 2rem;
+            border-radius: 3rem;
+            font-size: 1.4rem;
+            margin: 0;
+            backdrop-filter: blur(5px);
+        }
+    }
 }
 
-.contenido-hero h2 {
-    font-family: v.$fuente_principal;
-    color: v.$blanco;
-    font-size: 4.5rem;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.contenido-hero p {
-    font-family: v.$fuente_principal;
-    color: v.$blanco;
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 3rem;
-    font-weight: 400;
-    font-size: 2.2rem;
-}
-
-@keyframes banner {
-    0%, 17% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner1.jpeg); }
-    18%, 35% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner2.jpeg); }
-    36%, 53% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner3.jpeg); }
-    54%, 71% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner4.jpeg); }
-    72%, 89% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner5.jpeg); }
-    90%, 100% { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/banner6.jpeg); }
+@keyframes bannerFade {
+    0%, 30% { background-image: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), url('../img/banner1.jpeg'); }
+    31%, 60% { background-image: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), url('../img/banner2.jpeg'); }
+    61%, 100% { background-image: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), url('../img/banner3.jpeg'); }
 }
 
 /* estilo para los botones */
 .boton {
-    background-color: v.$verde;
-    color: v.$blanco;
-    padding: 1.5rem 4rem;
-    border-radius: 5rem;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 900;
     display: inline-block;
-    transition: all 0.3s ease;
-    border: 2px solid v.$verde;
+    background-color: v.$accent_primary;
+    color: v.$blanco;
+    padding: 1.8rem 4rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: v.$transition_mid;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+        background-color: #4f46e5;
+    }
 }
 
-.boton:hover {
-    background-color: transparent;
-    color: v.$verde;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}

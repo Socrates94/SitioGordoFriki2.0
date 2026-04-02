@@ -1,38 +1,52 @@
+@use 'base/variables' as v;
+
 /* Inicio loader */
 
 .hidden {
     overflow: hidden;
-  }
-  
+}
+
+
   .centrado {
-    height: 100vh;
-    background-color: var(--negro);
+    position: fixed;
+    inset: 0;
+    background: v.$bg_primary;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
+
+    p {
+        position: absolute;
+        margin-top: 15rem;
+        color: v.$accent_primary;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+        animation: pulse 1.5s infinite;
+    }
   }
   
   .lds-roller {
     display: inline-block;
     position: relative;
-    width: 8rem;
-    height: 8rem;
+    width: 80px;
+    height: 80px;
   }
   
   .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    transform-origin: 4rem 4rem;
+    transform-origin: 40px 40px;
   }
   
   .lds-roller div:after {
     content: " ";
     display: block;
     position: absolute;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
-    background: rgb(0, 0, 0);
-    margin: -0.4rem 0 0 -0.4rem;
+    background: v.$accent_primary;
+    margin: -4px 0 0 -4px;
   }
   
   .lds-roller div:nth-child(1) {
@@ -40,8 +54,8 @@
   }
   
   .lds-roller div:nth-child(1):after {
-    top: 6.3rem;
-    left: 6.3rem;
+    top: 63px;
+    left: 63px;
   }
   
   .lds-roller div:nth-child(2) {
@@ -49,8 +63,8 @@
   }
   
   .lds-roller div:nth-child(2):after {
-    top: 6.8rem;
-    left: 5.6rem;
+    top: 68px;
+    left: 56px;
   }
   
   .lds-roller div:nth-child(3) {
@@ -58,8 +72,8 @@
   }
   
   .lds-roller div:nth-child(3):after {
-    top: 7.1rem;
-    left: 4.8rem;
+    top: 71px;
+    left: 48px;
   }
   
   .lds-roller div:nth-child(4) {
@@ -67,8 +81,8 @@
   }
   
   .lds-roller div:nth-child(4):after {
-    top: 7.2rem;
-    left: 4rem;
+    top: 72px;
+    left: 40px;
   }
   
   .lds-roller div:nth-child(5) {
@@ -76,8 +90,8 @@
   }
   
   .lds-roller div:nth-child(5):after {
-    top: 7.1rem;
-    left: 3.2rem;
+    top: 71px;
+    left: 32px;
   }
   
   .lds-roller div:nth-child(6) {
@@ -85,8 +99,8 @@
   }
   
   .lds-roller div:nth-child(6):after {
-    top: 6.8rem;
-    left: 2.4rem;
+    top: 68px;
+    left: 24px;
   }
   
   .lds-roller div:nth-child(7) {
@@ -94,8 +108,8 @@
   }
   
   .lds-roller div:nth-child(7):after {
-    top: 6.3rem;
-    left: 1.7rem;
+    top: 63px;
+    left: 17px;
   }
   
   .lds-roller div:nth-child(8) {
@@ -103,10 +117,16 @@
   }
   
   .lds-roller div:nth-child(8):after {
-    top: 5.6rem;
-    left: 1.2rem;
+    top: 56px;
+    left: 12px;
   }
   
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
   @keyframes lds-roller {
     0% {
       transform: rotate(0deg);

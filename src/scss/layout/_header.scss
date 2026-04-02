@@ -1,60 +1,80 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.header{
-    background-color: v.$negro;
+.header {
+    background-color: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid v.$glass_border;
 
-    @include m.tablet{
-        &.fixed{
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            box-shadow: 0.1rem 0.2rem 0.3rem #333;
-        }
+    &.fixed {
+        position: fixed;
+        background-color: rgba(2, 6, 23, 0.98);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
+    .contenido-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 2rem;
 
-
-    .contenido-header{
-        padding: 2rem;
-        @include m.tablet{
-            display: flex;
+        @include m.tablet {
+            flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            padding: 2rem 0;
         }
     }
 
-    h1{
-        color: v.$blanco;
+    h1 {
+        font-size: 2.4rem;
+        margin: 0;
+        background: linear-gradient(90deg, #fff, v.$accent_primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-align: center;
-        @include m.tablet{
+
+        @include m.tablet {
             text-align: left;
-            margin: 0;
         }
     }
-
 }
 
-.navegacion-principal{
-    display:flex;
+.navegacion-principal {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    width: 100%;
 
-    @include m.tablet{
+    @include m.tablet {
         flex-direction: row;
+        gap: 3rem;
+        width: auto;
     }
-    
-    a{
-        color: v.$blanco;
-        font-size: 2.4rem;
+
+    a {
+        color: v.$text_primary;
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0.8rem 2rem;
+        border-radius: 2rem;
+        border: 1px solid transparent;
 
         &:hover, 
-        &.active{
-            color: v.$amarillo;
-            transform: scale(1.2);
+        &.active {
+            color: v.$blanco;
+            background-color: v.$accent_primary;
+            border-color: v.$accent_primary;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
         }
     }
-
 }
+

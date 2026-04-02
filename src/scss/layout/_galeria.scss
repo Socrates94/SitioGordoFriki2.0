@@ -1,83 +1,88 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.galeria{
-    @include m.contenedor;
+.galeria {
+    padding: 8rem 0;
 
-    &-imagenes{
-        @include m.grid(1, 2rem);
+    h3 {
+        color: v.$blanco;
+        margin-bottom: 5rem;
+    }
 
-        @include m.telefono{
-            @include m.grid(2, 2rem)
-        }
+    &-imagenes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        gap: 1.5rem;
 
-        @include m.tablet{
-            @include m.grid(3, 2rem);
-        }
-
-        @include m.desktop{
-            @include m.grid(4, 2rem)
-        }
-
-        @include m.desktopXL{
-            @include m.grid(5, 2rem)
-        }
-
-        // pone todas las imagenes del mismo tamanio
-        img{
-            height: 20rem;
+        picture img {
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: v.$transition_fast;
+            aspect-ratio: 1/1;
             object-fit: cover;
+
+            &:hover {
+                filter: brightness(1.2);
+                transform: scale(1.05);
+            }
         }
     }
 }
 
-.modal{
+.modal {
     position: fixed;
     inset: 0;
-    background-color: rgba(v.$negro, 0.5);
-
+    background-color: rgba(2, 6, 23, 0.95);
     display: grid;
-    place-items:  center;
+    place-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
 
-    animation: fadeIn ease-in 0.5s;
-    &.fade-out{
-        animation: fadeOut ease-in 0.5s;
+    &.fade-out {
+        animation: fadeOut 0.3s ease forwards;
     }
 
-    img{
-        max-width: 100rem;
+    img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 50px rgba(0,0,0,0.8);
     }
 }
 
-.btn-cerrar{
-    font-size: 4rem;
-    font-weight: bold;
-    color: v.$rosa;
-    background-color: v.$blanco;
-    border: none;
+.btn-cerrar {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background: v.$accent_tertiary;
+    color: v.$blanco;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    border: none;
     cursor: pointer;
-}
+    display: grid;
+    place-items: center;
+    transition: v.$transition_fast;
 
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
+    &:hover {
+        transform: scale(1.1);
+        background-color: darken(#f53756, 10%);
     }
 }
 
-@keyframes fadeOut{
-    0%{
-        opacity: 1;
-    }
-
-    100%{
-        opacity: 0;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 
 
 

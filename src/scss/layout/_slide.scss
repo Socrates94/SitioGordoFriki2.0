@@ -1,60 +1,58 @@
+@use 'base/variables' as v;
 @use 'base/mixins' as m;
-  
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .logos {
+
+.logos {
+    padding: 6rem 0;
+    background: v.$bg_primary;
     overflow: hidden;
-    padding: 4rem;
-    background: white;
-    white-space: nowrap;
     position: relative;
-  }
-  
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
-  
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:hover .logos-slide {
-    animation-play-state: paused;
-  }
 
-  
-  .logos-slide {
-    //display: inline-block;
-    animation: 15s slide infinite linear;
-  }
-  
-  .logos-slide img{
-    //animation: 10s slide infinite linear;
-    margin: 0 4rem;
-    width: 10rem;
-    height: 10rem;
-    display: inline-block;
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        width: 15rem;
+        height: 100%;
+        content: "";
+        z-index: 2;
+        pointer-events: none;
+    }
 
-  }
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, v.$bg_primary, transparent);
+    }
 
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, v.$bg_primary, transparent);
+    }
+}
 
+.logos-slide {
+    display: flex;
+    gap: 8rem;
+    animation: infiniteScroll 30s linear infinite;
+    width: max-content;
+    align-items: center;
 
+    &:hover {
+        animation-play-state: paused;
+    }
+
+    .logo-imagen {
+        height: 6rem;
+        width: auto;
+        filter: brightness(0) invert(1) opacity(0.7);
+        transition: v.$transition_fast;
+
+        &:hover {
+            filter: brightness(1) invert(0) opacity(1);
+        }
+    }
+}
+
+@keyframes infiniteScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}

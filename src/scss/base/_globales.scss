@@ -3,7 +3,8 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    scroll-padding-top: 0rem;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
 }
 *, 
 *:before,
@@ -12,49 +13,69 @@ html {
 }
 
 body {
+    background-color: v.$bg_primary;
+    color: v.$text_primary;
     font-family: v.$fuente_principal;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: v.$negro;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
 
     &.overflow-hidden{
         overflow: hidden;
     }
 }
 p {
-    color: v.$negro;
-    line-height: 1.5;
+    color: v.$text_secondary;
+    line-height: 1.6;
 }
+
 .contenedor {
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
+    transition: v.$transition_fast;
 }
+
 h1, h2, h3 {
-    margin: 0 0 5rem 0;
+    margin: 0 0 3rem 0;
     font-weight: 900;
+    text-transform: uppercase;
 }
 h1 {
-    font-size: 4rem;
+    font-size: clamp(3.5rem, 8vw, 6rem);
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 6vw, 4.5rem);
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
 }
+
 img {
     max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
 }
+
 body > section {
-    padding: 10rem 0
+    padding: 8rem 0;
+}
+
+/* Glassmorphism utility class */
+.glass-card {
+    background: v.$glass_bg;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid v.$glass_border;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: v.$transition_mid;
 }

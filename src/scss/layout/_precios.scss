@@ -1,83 +1,93 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
-@use "sass:color";
 
-.contenedor-precios{
-    background-color: v.$negro;
+.contenedor-precios {
+    padding: 8rem 0;
+    background-color: v.$bg_primary;
 
-    h3{
+    h3 {
         color: v.$blanco;
+        margin-bottom: 6rem;
     }
 
-    .boletos{
-        @include m.contenedor;
-        @include m.tablet{
-            @include m.grid(2)
+    .boletos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+
+        @include m.tablet {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
 
-.pase{
-    transition: transform .3s ease-in-out;
-    &:hover{
-        transform: scale(1.1);
+.pase {
+    background: v.$bg_secondary;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid v.$glass_border;
+    transition: v.$transition_mid;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-1rem);
+        border-color: v.$accent_primary;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     }
 
-    &-nombre{
-        font-size: 3.6rem;
-        font-weight: bold;
+    &-header {
+        background: v.$accent_primary;
+        padding: 1rem;
         text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.4rem;
         color: v.$blanco;
+        letter-spacing: 1px;
     }
 
-    &-header,
-    &-footer{
-        padding: 0.5rem;
+    &-nombre {
+        padding: 3rem 2rem;
+        font-size: 2.8rem;
+        text-align: center;
+        font-weight: 900;
+        color: v.$blanco;
+        margin: 0;
+    }
 
-        p{
-            text-align: center;
-            color: v.$blanco;
+    &-body {
+        padding: 0 3rem;
+        flex-grow: 1;
+
+        ul {
+            @include m.resetear-lista;
+            
+            li {
+                padding: 1.5rem 0;
+                color: v.$text_secondary;
+                border-bottom: 1px solid v.$glass_border;
+                font-size: 1.6rem;
+                text-align: center;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding: 4rem 3rem;
+        text-align: center;
+
+        p {
+            font-size: 3rem;
+            font-weight: 900;
+            color: v.$text_primary;
             margin: 0;
         }
     }
-
-    &-header{
-        background-color: v.$rosa;
-        p{
-            text-transform: uppercase;
-            font-size: 2.2rem;
-            padding: 1rem 0;
-        }
-    }
-
-    &-body{
-        background-color: v.$blanco;
-        ul{
-            @include m.resetear-lista;
-            li{
-                padding: 2rem;
-                border-bottom: 1px solid #e1e1e1;
-            }
-        }
-    }
-
-    &-footer{
-        background-color: v.$blanco;
-        padding: 3rem;
-
-        p{
-            font-size: 2.8rem;
-            font-weight: bold;
-            background-color: v.$morado;
-            padding: 1rem 0;
-            border-radius: 1rem;
-            cursor: pointer;
-            transition: background-color .3s ease-in-out;
-            &:hover{
-                background-color: color.adjust(v.$morado, $lightness: -20%);
-                transform: scale(1.1);
-            }
-        }
-    }
 }
+
 
