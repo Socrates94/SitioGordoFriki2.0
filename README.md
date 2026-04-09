@@ -1,6 +1,6 @@
 # Gordo Friki - Sitio Web 2.0
 
-![Gordo Friki Banner](src/img/banner1.jpeg)
+![Gordo Friki Banner](src/img/banner1.png)
 
 Sitio web oficial de **El taller del gordo friki**, una consultoría de vanguardia especializada en infraestructura TI, reparación de hardware y desarrollo de software a medida en la Ciudad de Puebla.
 
