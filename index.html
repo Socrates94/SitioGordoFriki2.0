@@ -1,318 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gordo Friki</title>
 
-    <link rel="icon" href="src/img/logo.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gordo Friki</title>
 
-    <link rel="stylesheet" href="build/css/app.css" />
+  <link rel="icon" href="src/img/logo.ico" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- codigo para el spin de carga -->
-    <div class="centrado" id="spin">
-      <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+  <link rel="stylesheet" href="build/css/app.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- codigo para el spin de carga -->
+  <div class="centrado" id="spin">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p style="position: absolute; margin-top: 12rem; color: #6366f1; font-weight: 900; letter-spacing: 2px;">CARGANDO...
+    </p>
+  </div>
+
+  <header class="header">
+    <div class="contenedor contenido-header">
+      <h1>El taller del gordo friki</h1>
+
+      <nav class="navegacion-principal">
+        <a href="#lineup">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#boletos">Precios</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="contenedor contenido-hero">
+      <h2>Potencia y Precisión para tu Tecnología</h2>
+      <div class="ubicacion">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="24"
+          height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6366f1" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+            stroke-width="0" fill="currentColor" />
+        </svg>
+        <p>Ciudad de Puebla</p>
       </div>
-      <p style="position: absolute; margin-top: 12rem; color: #6366f1; font-weight: 900; letter-spacing: 2px;">CARGANDO...</p>
+
+      <a href="https://api.whatsapp.com/send?phone=2215580022&text=Hola Gordo Friki, necesito tu ayuda, mi PC no funciona."
+        target="_blank" class="boton">Solicitar Servicio</a>
+    </div>
+  </section>
+
+  <section class="sobre-nosotros contenedor">
+    <div class="imagen">
+      <img src="src/img/lomito.png" alt="Mascota del taller" />
     </div>
 
-    <header class="header">
-      <div class="contenedor contenido-header">
-        <h1>El taller del gordo friki</h1>
+    <div class="contenido-nosotros">
+      <p class="fecha">Consultoría de Vanguardia</p>
+      <h2>Solucionamos tus problemas</h2>
+      <p>
+        Con años de experiencia en el sector tecnológico, <strong>El taller del gordo friki</strong> ofrece consultoría
+        integral y servicios especializados para empresas de todos los tamaños. Nuestro enfoque está centrado en los
+        resultados: ayudamos a nuestros clientes a implementar soluciones tecnológicas que mejoran su productividad,
+        reducen costos y optimizan la experiencia de sus usuarios.
+      </p>
+      <p>
+        Nos enorgullecemos de crear relaciones duraderas con nuestros clientes, brindando soporte continuo y soluciones
+        escalables que crecen con ellos.
+      </p>
+    </div>
+  </section>
 
-        <nav class="navegacion-principal">
-          <a href="#lineup">Servicios</a>
-          <a href="#galeria">Galería</a>
-          <a href="#boletos">Precios</a>
-        </nav>
-      </div>
-    </header>
+  <section id="lineup" class="lineup">
+    <div class="contenedor">
+      <h3>Servicios Especializados</h3>
 
-    <section class="hero">
-      <div class="contenedor contenido-hero">
-        <h2>Potencia y Precisión para tu Tecnología</h2>
-        <div class="ubicacion">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-map-pin-filled"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#6366f1"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-              stroke-width="0"
-              fill="currentColor"
-            />
-          </svg>
-          <p>Ciudad de Puebla</p>
-        </div>
-        
-        <a
-          href="https://api.whatsapp.com/send?phone=2215580022&text=Hola Gordo Friki, necesito tu ayuda, mi PC no funciona."
-          target="_blank"
-          class="boton"
-          >Solicitar Servicio</a
-        >
-      </div>
-    </section>
+      <p class="dia">Hardware & Soporte Físico</p>
+      <div class="escenarios-contenedor">
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">PC / Notebook</p>
 
-    <section class="sobre-nosotros contenedor">
-      <div class="imagen">
-        <img src="src/img/lomito.png" alt="Mascota del taller" />
-      </div>
-
-      <div class="contenido-nosotros">
-        <p class="fecha">Consultoría de Vanguardia</p>
-        <h2>Solucionamos tus problemas</h2>
-        <p>
-          Con años de experiencia en el sector tecnológico, <strong>El taller del gordo friki</strong> ofrece consultoría integral y servicios especializados para empresas de todos los tamaños. Nuestro enfoque está centrado en los resultados: ayudamos a nuestros clientes a implementar soluciones tecnológicas que mejoran su productividad, reducen costos y optimizan la experiencia de sus usuarios.
-        </p>
-        <p>
-          Nos enorgullecemos de crear relaciones duraderas con nuestros clientes, brindando soporte continuo y soluciones escalables que crecen con ellos.
-        </p>
-      </div>
-    </section>
-
-    <section id="lineup" class="lineup">
-      <div class="contenedor">
-        <h3>Servicios Especializados</h3>
-
-        <p class="dia">Hardware & Soporte Físico</p>
-        <div class="escenarios-contenedor">
-          <div class="escenario bg-amarillo">
-            <p class="nombre-escenario">PC / Notebook</p>
-
-            <ul class="calendario">
-              <li>Instalación de S.O. <span>$400</span></li>
-              <li>Soporte remoto <span>Desde $300</span></li>
-              <li>Diagnóstico <span>$150</span></li>
-              <li>Mantenimiento <span>$350</span></li>
-              <li>Desinfectar información <span>$300</span></li>
-              <li>Respaldos <span>Desde $350</span></li>
-            </ul>
-          </div>
-
-          <div class="escenario bg-verde">
-            <p class="nombre-escenario">Periféricos</p>
-
-            <ul class="calendario">
-              <li>Reparación a nivel componente <span>Desde $1200</span></li>
-              <li>Recuperación de información <span>Desde $5000</span></li>
-              <li>Clonación <span>$600</span></li>
-              <li>Actualización de equipo <span>Desde $1400</span></li>
-              <li>Configuraciones avanzadas <span>Desde $200</span></li>
-              <li>Reparación de impresoras <span>Desde $850</span></li>
-            </ul>
-          </div>
+          <ul class="calendario">
+            <li>Instalación de S.O. <span>$400</span></li>
+            <li>Soporte remoto <span>Desde $300</span></li>
+            <li>Diagnóstico <span>$150</span></li>
+            <li>Mantenimiento <span>$350</span></li>
+            <li>Desinfectar información <span>$300</span></li>
+            <li>Respaldos <span>Desde $350</span></li>
+          </ul>
         </div>
 
-        <p class="dia">Software & Soluciones Digitales</p>
-        <div class="escenarios-contenedor">
-          <div class="escenario bg-verde">
-            <p class="nombre-escenario">Software Original</p>
+        <div class="escenario bg-verde">
+          <p class="nombre-escenario">Periféricos</p>
 
-            <ul class="calendario">
-              <li>Licencias OEM <span>Desde $750</span></li>
-              <li>Antivirus (Todas las marcas) <span>Desde $350</span></li>
-              <li>Instalación de software <span>Desde $350</span></li>
-              <li>Licencias Retail <span>Desde $4000</span></li>
-              <li>Soporte de instalación <span>$250</span></li>
-              <li>Juegos & Multimedia <span>$250</span></li>
-            </ul>
-          </div>
-
-          <div class="escenario bg-amarillo">
-            <p class="nombre-escenario">Desarrollo a Medida</p>
-
-            <ul class="calendario">
-              <li>Sitio Web (Landing Page) <span>Desde $3000</span></li>
-              <li>Mantenimiento de Software <span>Desde $5000</span></li>
-              <li>Servidores (Web, FTP, etc.) <span>$6000</span></li>
-              <li>App de Escritorio <span>Desde $5000</span></li>
-              <li>App Móvil (Android/iOS) <span>Desde $12000</span></li>
-              <li>Redes & Conectividad <span>Desde $500</span></li>
-            </ul>
-          </div>
+          <ul class="calendario">
+            <li>Reparación a nivel componente <span>Desde $1200</span></li>
+            <li>Recuperación de información <span>Desde $5000</span></li>
+            <li>Clonación <span>$600</span></li>
+            <li>Actualización de equipo <span>Desde $1400</span></li>
+            <li>Configuraciones avanzadas <span>Desde $200</span></li>
+            <li>Reparación de impresoras <span>Desde $850</span></li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <section class="galeria" id="galeria">
-      <h3>Galería</h3>
-      <ul class="galeria-imagenes"></ul>
-    </section>
+      <p class="dia">Software & Soluciones Digitales</p>
+      <div class="escenarios-contenedor">
+        <div class="escenario bg-verde">
+          <p class="nombre-escenario">Software Original</p>
 
-    <section id="boletos" class="contenedor-precios">
-      <div class="contenedor">
-        <h3>Promociones Destacadas</h3>
-
-        <div class="boletos">
-          <div class="pase">
-            <header class="pase-header">Más Popular</header>
-            <p class="pase-nombre">Instalación S.O.</p>
-            <div class="pase-body">
-              <ul>
-                <li>Windows 10, 11 & Linux</li>
-                <li>Drivers Optimizados</li>
-                <li>Ofimática Completa</li>
-                <li>Garantía de Satisfacción</li>
-              </ul>
-            </div>
-            <footer class="pase-footer">
-              <p>$400</p>
-            </footer>
-          </div>
-
-          <div class="pase">
-            <header class="pase-header">Plus</header>
-            <p class="pase-nombre">Soporte en Sitio</p>
-            <div class="pase-body">
-              <ul>
-                <li>Visita Técnica a Domicilio</li>
-                <li>Diagnóstico Profesional</li>
-                <li>Presupuesto sin Compromiso</li>
-                <li>Solución Inmediata</li>
-              </ul>
-            </div>
-            <footer class="pase-footer">
-              <p>Desde $400</p>
-            </footer>
-          </div>
+          <ul class="calendario">
+            <li>Licencias OEM <span>Desde $750</span></li>
+            <li>Antivirus (Todas las marcas) <span>Desde $350</span></li>
+            <li>Instalación de software <span>Desde $350</span></li>
+            <li>Licencias Retail <span>Desde $4000</span></li>
+            <li>Soporte de instalación <span>$250</span></li>
+            <li>Juegos & Multimedia <span>$250</span></li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- slide infinito -->
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">Desarrollo a Medida</p>
 
-    <div class="logos">
-      <div class="logos-slide">
-          <img class="logo-imagen" src="src/img/asus.png" alt="Logo de Asus">
-          <img class="logo-imagen" src="src/img/computadora.png" alt="Icono de computadora">
-          <img class="logo-imagen" src="src/img/cromo.png" alt="Logo de Chrome">
-          <img class="logo-imagen" src="src/img/epson.png" alt="Logo de Epson">
-          <img class="logo-imagen" src="src/img/hp.png" alt="Logo de HP">
-          <img class="logo-imagen" src="src/img/lenovo.png" alt="Logo de Lenovo">
-          <img class="logo-imagen" src="src/img/logotipo-de-apple.png" alt="Logo de Apple">
-          <img class="logo-imagen" src="src/img/microsoft.png" alt="Logo de Microsoft">
-          <img class="logo-imagen" src="src/img/samsung.png" alt="Logo de Samsung">
-          <!-- Duplicate for infinite scroll -->
-          <img class="logo-imagen" src="src/img/asus.png" alt="Logo de Asus">
-          <img class="logo-imagen" src="src/img/computadora.png" alt="Icono de computadora">
-          <img class="logo-imagen" src="src/img/cromo.png" alt="Logo de Chrome">
-          <img class="logo-imagen" src="src/img/epson.png" alt="Logo de Epson">
-          <img class="logo-imagen" src="src/img/hp.png" alt="Logo de HP">
-          <img class="logo-imagen" src="src/img/lenovo.png" alt="Logo de Lenovo">
-          <img class="logo-imagen" src="src/img/logotipo-de-apple.png" alt="Logo de Apple">
+          <ul class="calendario">
+            <li>Sitio Web (Landing Page) <span>Desde $3000</span></li>
+            <li>Mantenimiento de Software <span>Desde $5000</span></li>
+            <li>Servidores (Web, FTP, etc.) <span>$6000</span></li>
+            <li>App de Escritorio <span>Desde $5000</span></li>
+            <li>App Móvil (Android/iOS) <span>Desde $12000</span></li>
+            <li>Redes & Conectividad <span>Desde $500</span></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-     <!-- fin del slide infinito -->
+  <section class="galeria" id="galeria">
+    <h3>Galería</h3>
+    <ul class="galeria-imagenes"></ul>
+  </section>
 
-    <!-- inicio del footer -->
+  <section id="boletos" class="contenedor-precios">
+    <div class="contenedor">
+      <h3>Promociones Destacadas</h3>
 
-    <footer class="pie-pagina">
-      <div class="contenedor">
-        <div class="grupo-1">
-          <div class="box">
-            <h1>El taller del gordo friki</h1>
-            <p>Transformamos problemas técnicos en soluciones digitales de alto rendimiento.</p>
+      <div class="boletos">
+        <div class="pase">
+          <header class="pase-header">Más Popular</header>
+          <p class="pase-nombre">Instalación S.O.</p>
+          <div class="pase-body">
+            <ul>
+              <li>Windows 10, 11 & Linux</li>
+              <li>Drivers Optimizados</li>
+              <li>Ofimática Completa</li>
+              <li>Garantía de Satisfacción</li>
+            </ul>
           </div>
-
-          <div class="box">
-            <h2>Nuestra Misión</h2>
-            <p>
-              Consultoría especializada en infraestructura TI, reparación de hardware y desarrollo de software a medida en la Ciudad de Puebla.
-            </p>
-          </div>
-
-          <div class="box">
-            <h2>Síguenos</h2>
-            <div class="red-social">
-              <!-- WhatsApp -->
-              <a href="https://api.whatsapp.com/send?phone=2215580022" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-                </svg>
-              </a>
-              <!-- Facebook -->
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                </svg>
-              </a>
-              <!-- TikTok -->
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
-                </svg>
-              </a>
-            </div>
-          </div>
+          <footer class="pase-footer">
+            <p>$400</p>
+          </footer>
         </div>
 
-        <div class="grupo-2">
-          <small>&copy; 2024-2028 <b>El taller del gordo friki</b> - Todos los derechos reservados.</small>
+        <div class="pase">
+          <header class="pase-header">Plus</header>
+          <p class="pase-nombre">Soporte en Sitio</p>
+          <div class="pase-body">
+            <ul>
+              <li>Visita Técnica a Domicilio</li>
+              <li>Diagnóstico Profesional</li>
+              <li>Presupuesto sin Compromiso</li>
+              <li>Solución Inmediata</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>Desde $400</p>
+          </footer>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- fin del footer -->
+  <!-- slide infinito -->
 
-    <!-- boton flotante de whatsapp -->
-    <a
-      href="https://api.whatsapp.com/send?phone=2215580022&text=Hola Gordo Friki necesito tu ayuda, mi PC no funciona."
-      class="btn-wsp"
-      target="_blank"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-brand-whatsapp"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-        <path
-          d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
-        />
-      </svg>
-    </a>
+  <div class="logos">
+    <div class="logos-slide">
+      <img class="logo-imagen" src="src/img/asus.png" alt="Logo de Asus">
+      <img class="logo-imagen" src="src/img/computadora.png" alt="Icono de computadora">
+      <img class="logo-imagen" src="src/img/cromo.png" alt="Logo de Chrome">
+      <img class="logo-imagen" src="src/img/epson.png" alt="Logo de Epson">
+      <img class="logo-imagen" src="src/img/hp.png" alt="Logo de HP">
+      <img class="logo-imagen" src="src/img/lenovo.png" alt="Logo de Lenovo">
+      <img class="logo-imagen" src="src/img/logotipo-de-apple.png" alt="Logo de Apple">
+      <img class="logo-imagen" src="src/img/microsoft.png" alt="Logo de Microsoft">
+      <img class="logo-imagen" src="src/img/samsung.png" alt="Logo de Samsung">
+      <!-- Duplicate for infinite scroll -->
+      <img class="logo-imagen" src="src/img/asus.png" alt="Logo de Asus">
+      <img class="logo-imagen" src="src/img/computadora.png" alt="Icono de computadora">
+      <img class="logo-imagen" src="src/img/cromo.png" alt="Logo de Chrome">
+      <img class="logo-imagen" src="src/img/epson.png" alt="Logo de Epson">
+      <img class="logo-imagen" src="src/img/hp.png" alt="Logo de HP">
+      <img class="logo-imagen" src="src/img/lenovo.png" alt="Logo de Lenovo">
+      <img class="logo-imagen" src="src/img/logotipo-de-apple.png" alt="Logo de Apple">
+    </div>
+  </div>
 
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="build/js/app.js"></script>
-  </body>
+  <!-- fin del slide infinito -->
+
+  <!-- inicio del footer -->
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="grupo-1">
+        <div class="box">
+          <h1>El taller del gordo friki</h1>
+          <p>Transformamos problemas técnicos en soluciones digitales de alto rendimiento.</p>
+        </div>
+
+        <div class="box">
+          <h2>Nuestra Misión</h2>
+          <p>
+            Consultoría especializada en infraestructura TI, reparación de hardware y desarrollo de software a medida en
+            la Ciudad de Puebla.
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>Síguenos</h2>
+          <div class="red-social">
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=2215580022" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="40"
+                height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                <path
+                  d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40"
+                height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" width="40"
+                height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-2">
+        <small>&copy; 2024-2028 <b>El taller del gordo friki</b> - Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- fin del footer -->
+
+  <!-- boton flotante de whatsapp -->
+  <a href="https://api.whatsapp.com/send?phone=2215580022&text=Hola Gordo Friki necesito tu ayuda, mi PC no funciona."
+    class="btn-wsp" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="44" height="44"
+      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+    </svg>
+  </a>
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="build/js/app.js"></script>
+</body>
+
 </html>
