@@ -502,7 +502,8 @@ body > section {
 @media (min-width: 768px) {
   .contenido-hero {
     text-align: left;
-    margin: 0;
+    max-width: 120rem;
+    width: 95%;
   }
 }
 .contenido-hero h2 {
@@ -511,6 +512,11 @@ body > section {
   margin-bottom: 3rem;
   color: #FFFFFF;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px) {
+  .contenido-hero h2 {
+    max-width: 80rem;
+  }
 }
 .contenido-hero .ubicacion {
   display: flex;

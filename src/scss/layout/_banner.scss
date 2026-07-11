@@ -37,7 +37,8 @@
 
     @include m.tablet {
         text-align: left;
-        margin: 0;
+        max-width: 120rem;
+        width: 95%;
     }
 
     h2 {
@@ -46,6 +47,10 @@
         margin-bottom: 3rem;
         color: v.$blanco;
         text-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+        @include m.tablet {
+            max-width: 80rem;
+        }
     }
 
     .ubicacion {
