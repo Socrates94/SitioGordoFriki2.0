@@ -1,6 +1,13 @@
 window.onload = function () {
-    $("#spin").fadeOut();
-    $("body").removeClass("hidden");
+    const spin = document.getElementById("spin");
+    if (spin) {
+        spin.style.transition = "opacity 0.5s ease";
+        spin.style.opacity = "0";
+        setTimeout(() => {
+            spin.style.display = "none";
+        }, 500);
+    }
+    document.body.classList.remove("hidden");
 };
 
 document.addEventListener("DOMContentLoaded", function () {
